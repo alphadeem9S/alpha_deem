@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include alpha_deem *.css
+recursive-include alpha_deem *.csv
+recursive-include alpha_deem *.html
+recursive-include alpha_deem *.ico
+recursive-include alpha_deem *.js
+recursive-include alpha_deem *.json
+recursive-include alpha_deem *.md
+recursive-include alpha_deem *.png
+recursive-include alpha_deem *.py
+recursive-include alpha_deem *.svg
+recursive-include alpha_deem *.txt
+recursive-exclude alpha_deem *.pyc
