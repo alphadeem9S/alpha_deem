@@ -150,6 +150,7 @@
   },
   {
    "collapsible": 1,
+   "fetch_from": "employee.employee_managment_approver",
    "fieldname": "employee_mangement_section",
    "fieldtype": "Section Break",
    "label": "Employee Mangement"
@@ -159,7 +160,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "employee.reports_to",
+   "fetch_from": "employee.employee_managment_approver",
    "fetch_if_empty": 1,
    "fieldname": "name_employee_mangement_section",
    "fieldtype": "Link",
@@ -174,7 +175,7 @@
    "fieldname": "clearance_employee_mangement_section",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "\nYes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "reason_mangement_section",
@@ -191,18 +192,21 @@
    "fieldname": "name_itdep",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_cb4rs",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date_itdep",
    "fieldtype": "Date",
    "label": "Date"
   },
   {
+   "default": "Today",
    "fieldname": "date_mangement_section",
    "fieldtype": "Date",
    "label": "Date"
@@ -216,7 +220,7 @@
    "fieldname": "clearance_itdep",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "reason_itdep",
@@ -233,7 +237,8 @@
    "fieldname": "finance_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_jfjil",
@@ -242,10 +247,10 @@
   {
    "fieldname": "finance_component",
    "fieldtype": "Table",
-   "options": "Finance Component",
-   "permlevel": 1
+   "options": "Finance Component"
   },
   {
+   "default": "Today",
    "fieldname": "finance_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -254,7 +259,7 @@
    "fieldname": "clearance_finance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "reason_finance",
@@ -271,13 +276,15 @@
    "fieldname": "hr_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_2lmyv",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "hr_date",
    "fieldtype": "Date",
    "label": "hr_date"
@@ -286,7 +293,7 @@
    "fieldname": "hr_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "column_break_t5bit",
@@ -304,16 +311,19 @@
    "label": "Operation Manager"
   },
   {
+   "fetch_from": "employee.operation_managment_approver",
    "fieldname": "operation_manager_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_rrkhv",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "operation_manager_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -326,7 +336,7 @@
    "fieldname": "operation_manager_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "operation_manager_reason",
@@ -343,13 +353,15 @@
    "fieldname": "top_management_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_x4rwc",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "top_management_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -362,7 +374,7 @@
    "fieldname": "top_management_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "top_management_reason",
@@ -379,13 +391,15 @@
    "fieldname": "warehouses_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ip3rp",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "warehouses_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -398,7 +412,7 @@
    "fieldname": "warehouses_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "warehouses_reason",
@@ -419,9 +433,11 @@
    "fieldname": "customer_accountant_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "customer_accountant_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -434,7 +450,7 @@
    "fieldname": "customer_accountant_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "customer_accountant_reason",
@@ -451,13 +467,15 @@
    "fieldname": "movement_department_name",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_b2wyu",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "movement_department_date",
    "fieldtype": "Date",
    "label": "Date"
@@ -470,7 +488,7 @@
    "fieldname": "movement_department_clearance",
    "fieldtype": "Select",
    "label": "Clearance",
-   "options": "Yes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "movement_department_reason",
@@ -485,7 +503,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-14 10:52:55.015047",
+ "modified": "2023-08-15 11:25:23.620067",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
