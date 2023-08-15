@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:CL-{####}",
  "creation": "2023-08-13 12:43:30.878686",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,12 +12,16 @@
   "employee",
   "nationality",
   "designation",
+  "branch",
   "column_break_9zi831",
   "last_day",
   "date_of_joining",
+  "employee_name",
   "column_break_rxzxv",
+  "employment_type",
   "clearance_reason",
   "department",
+  "contract_start_date",
   "employee_mangement_section",
   "name_employee_mangement_section",
   "reason_mangement_section",
@@ -165,7 +170,8 @@
    "fieldname": "name_employee_mangement_section",
    "fieldtype": "Link",
    "label": "Name",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_k9vq9",
@@ -498,15 +504,50 @@
   {
    "fieldname": "column_break_9zi831",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.final_confirmation_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2023-08-15 11:25:23.620067",
+ "links": [
+  {
+   "link_doctype": "Final Settlement",
+   "link_fieldname": "clearance_form"
+  }
+ ],
+ "modified": "2023-08-15 16:07:46.894039",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -518,6 +559,19 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }
