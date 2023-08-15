@@ -10,18 +10,18 @@
  "field_order": [
   "information_section",
   "employee",
-  "nationality",
+  "employee_name",
   "designation",
   "branch",
   "column_break_9zi831",
   "last_day",
+  "nationality",
   "date_of_joining",
-  "employee_name",
-  "column_break_rxzxv",
-  "employment_type",
-  "clearance_reason",
-  "department",
   "contract_start_date",
+  "column_break_rxzxv",
+  "clearance_reason",
+  "employment_type",
+  "department",
   "employee_mangement_section",
   "name_employee_mangement_section",
   "reason_mangement_section",
@@ -532,7 +532,8 @@
    "fieldname": "employment_type",
    "fieldtype": "Link",
    "label": "Employment Type",
-   "options": "Employment Type"
+   "options": "Employment Type",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -543,7 +544,7 @@
    "link_fieldname": "clearance_form"
   }
  ],
- "modified": "2023-08-15 17:16:26.610750",
+ "modified": "2023-08-15 17:19:34.724803",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
