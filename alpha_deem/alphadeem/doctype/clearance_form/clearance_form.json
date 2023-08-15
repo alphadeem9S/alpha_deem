@@ -543,7 +543,7 @@
    "link_fieldname": "clearance_form"
   }
  ],
- "modified": "2023-08-15 16:07:46.894039",
+ "modified": "2023-08-15 17:16:26.610750",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
@@ -551,6 +551,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -560,6 +561,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -573,6 +575,7 @@
    "role": "HR Manager",
    "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
