@@ -76,13 +76,14 @@
    "fieldname": "customer_accountant",
    "fieldtype": "Link",
    "label": "Customer Accountant",
-   "options": "User"
+   "options": "User",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-08-15 10:46:11.455324",
+ "modified": "2023-08-15 11:50:31.226461",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Department managers",
