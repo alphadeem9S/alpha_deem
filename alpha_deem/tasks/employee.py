@@ -24,6 +24,9 @@ def validat_employee_expire_date():
                 else:
                     employee_doc.contract_status="Valid"
                     employee_doc.save()        
+            else:
+                employee_doc.contract_status=""
+                employee_doc.save()   
 
 
             if  not employee["release_end_date"]== None:
@@ -41,4 +44,6 @@ def validat_employee_expire_date():
                 else:
                     employee_doc.id_status="Valid"
                     employee_doc.save()     
-
+            else:
+                    employee_doc.id_status=""
+                    employee_doc.save()   
