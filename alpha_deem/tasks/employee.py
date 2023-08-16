@@ -4,7 +4,7 @@ from frappe.utils.data import date_diff
 
 def validat_employee_expire_date():
 
-        employees=frappe.db.get_list('Employee',fields=["name",'contract_end_date', 'release_end_date'])
+        employees=frappe.db.get_list('Employee',filters={"status":"Active"},fields=["name",'contract_end_date', 'release_end_date'])
         
         for employee in employees:
             employee_doc=frappe.get_doc('Employee',employee["name"])
