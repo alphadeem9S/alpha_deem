@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CLF-{####}",
+ "autoname": "naming_series:",
  "creation": "2023-08-13 12:43:30.878686",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "information_section",
+  "naming_series",
   "employee",
   "employee_name",
   "designation",
@@ -534,6 +535,13 @@
    "label": "Employment Type",
    "options": "Employment Type",
    "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CF_"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -544,11 +552,11 @@
    "link_fieldname": "clearance_form"
   }
  ],
- "modified": "2023-08-15 17:28:17.591751",
+ "modified": "2023-08-16 10:38:28.287511",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
