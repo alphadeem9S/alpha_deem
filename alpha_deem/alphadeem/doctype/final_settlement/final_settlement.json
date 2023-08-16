@@ -13,17 +13,20 @@
   "clearance_form",
   "branch",
   "designation",
+  "date_of_joining",
   "contract_start_date",
   "column_break_orr5i",
   "employee",
   "department",
   "employment_type",
   "last_day_of_work",
+  "actual_start_date",
   "column_break_cbe6g",
   "employee_name",
   "nationality",
   "clearance_reason",
   "service_duration",
+  "last_working_period",
   "salary_details_section",
   "basic_salary",
   "nature_of_work",
@@ -98,13 +101,6 @@
    "fieldtype": "Link",
    "label": "Department",
    "options": "Department",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "clearance_form.contract_start_date",
-   "fieldname": "contract_start_date",
-   "fieldtype": "Date",
-   "label": "Contract Start Date",
    "read_only": 1
   },
   {
@@ -303,12 +299,39 @@
    "hidden": 1,
    "label": "Series",
    "options": "FS_"
+  },
+  {
+   "fetch_from": "clearance_form.actual_start_date",
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "clearance_form.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_working_period",
+   "fieldtype": "Data",
+   "label": "Last Working Period",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "clearance_form.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-16 10:38:19.633200",
+ "modified": "2023-08-16 11:12:20.524885",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Final Settlement",

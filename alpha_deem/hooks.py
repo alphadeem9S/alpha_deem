@@ -113,23 +113,24 @@ app_license = "info@smartsoleg.com"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"alpha_deem.tasks.all"
-#	],
-#	"daily": [
-#		"alpha_deem.tasks.daily"
-#	],
-#	"hourly": [
-#		"alpha_deem.tasks.hourly"
-#	],
-#	"weekly": [
-#		"alpha_deem.tasks.weekly"
-#	],
-#	"monthly": [
-#		"alpha_deem.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"alpha_deem.tasks.all"
+	# ],
+	"daily": [
+		"alpha_deem.tasks.vehicle.validate_vehicle_date",
+        "alpha_deem.tasks.employee.validat_employee_expire_date"
+	],
+	# "hourly": [
+	# 	"alpha_deem.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"alpha_deem.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"alpha_deem.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------

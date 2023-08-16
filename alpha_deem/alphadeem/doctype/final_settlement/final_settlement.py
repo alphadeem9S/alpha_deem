@@ -29,9 +29,13 @@ class FinalSettlement(Document):
     
     @frappe.whitelist()
     def calc_service_duration(self):
-        days=date_diff(self.last_day_of_work,self.contract_start_date)
-        date=days_to_years_months_days(days)
-        self.service_duration ="  سنه   {0}   شهر   {1}    يوم    {2}".format(date[0],date[1],date[2])
+        diff_data=get_date_diff(self.last_day_of_work,self.date_of_joining)
+        self.service_duration =diff_data
+
+        diff_data_last_days=get_date_diff(self.last_day_of_work,self.actual_start_date)
+        self.last_working_period =diff_data_last_days
+
+        
         try:
             doc = frappe.get_doc('Salary Structure Assignment',  { "docstatus": 1,"employee":self.employee })
             self.basic_salary=doc.base
@@ -49,6 +53,14 @@ class FinalSettlement(Document):
         for field in fields:
             total+=current_doc[field]
         self.total_salary= total
+
+
+def get_date_diff(first_date,second_date):
+    days=date_diff(first_date,second_date)
+    date=days_to_years_months_days(days)
+    return "  سنه   {0}   شهر   {1}    يوم    {2}".format(date[0],date[1],date[2])
+
+
 
 
 def days_to_years_months_days(days):

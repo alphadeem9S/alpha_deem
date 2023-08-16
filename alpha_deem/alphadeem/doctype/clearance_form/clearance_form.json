@@ -13,16 +13,17 @@
   "employee",
   "employee_name",
   "designation",
-  "branch",
+  "date_of_joining",
   "column_break_9zi831",
   "last_day",
   "nationality",
-  "date_of_joining",
-  "contract_start_date",
+  "department",
+  "actual_start_date",
   "column_break_rxzxv",
   "clearance_reason",
   "employment_type",
-  "department",
+  "branch",
+  "contract_start_date",
   "employee_mangement_section",
   "name_employee_mangement_section",
   "reason_mangement_section",
@@ -522,13 +523,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "employee.final_confirmation_date",
-   "fieldname": "contract_start_date",
-   "fieldtype": "Date",
-   "label": "Contract Start Date",
-   "read_only": 1
-  },
-  {
    "fetch_from": "employee.employment_type",
    "fieldname": "employment_type",
    "fieldtype": "Link",
@@ -542,6 +536,20 @@
    "hidden": 1,
    "label": "Series",
    "options": "CF_"
+  },
+  {
+   "fetch_from": "employee.final_confirmation_date",
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -552,7 +560,7 @@
    "link_fieldname": "clearance_form"
   }
  ],
- "modified": "2023-08-16 10:38:28.287511",
+ "modified": "2023-08-16 11:10:48.043486",
  "modified_by": "Administrator",
  "module": "ALPHADEEM",
  "name": "Clearance Form",
