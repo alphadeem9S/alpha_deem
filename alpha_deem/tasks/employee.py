@@ -16,7 +16,7 @@ def validat_employee_expire_date():
                     employee_doc.contract_status="Ended"
                     employee_doc.save()
 
-                elif date_diff(employee["contract_end_date"],today())<= 60:
+                elif date_diff(employee["contract_end_date"],today())<= 90:
 
                     employee_doc.contract_status="Almost Ended"
                     employee_doc.save()
